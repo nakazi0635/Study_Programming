@@ -19,6 +19,15 @@ def count_duplicates(items):
             counts[i] = 1
     return counts
 
+import unittest
+
+class TestConutDuplicates(unittest.TestCase):
+    def test_count_duplicates(self):
+        result = count_duplicates(['apple', 'banana', 'apple', 'orange', 'banana', 'apple'])
+        answer = {'apple': 3, 'banana': 2, 'orange': 1}
+        self.assertEqual(result, answer)
+
 if __name__ == '__main__':
     result = count_duplicates(['apple', 'banana', 'apple', 'orange', 'banana', 'apple'])
     print(result)
+    unittest.main()
